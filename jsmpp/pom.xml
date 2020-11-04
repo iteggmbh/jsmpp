@@ -4,8 +4,9 @@
   <parent>
     <groupId>org.jsmpp</groupId>
     <artifactId>jsmpp-pom</artifactId>
-    <version>2.3.11-SNAPSHOT</version>
+    <version>2.3.10</version>
   </parent>
+  <version>2.3.10-1clazzes1</version>
   <modelVersion>4.0.0</modelVersion>
   <packaging>bundle</packaging>
 
@@ -19,6 +20,13 @@
       <name>Apache License v2</name>
     </license>
   </licenses>
+
+  <distributionManagement>
+    <repository>
+      <id>org.clazzes-fancymail-dist</id>
+      <url>scpexe://fancymail@maven.clazzes.org/var/www/htdocs/maven.clazzes.org</url>
+    </repository>
+  </distributionManagement>
 
   <dependencies>
     <dependency>
@@ -34,6 +42,14 @@
   </dependencies>
 
   <build>
+    <extensions>
+      <!-- Enabling the use of scpexe:// URLs -->
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh-external</artifactId>
+        <version>3.4.1</version>
+      </extension>
+    </extensions>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
