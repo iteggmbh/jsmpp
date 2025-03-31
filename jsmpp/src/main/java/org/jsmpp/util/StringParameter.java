@@ -31,7 +31,7 @@ public enum StringParameter {
 	/**
 	 * password string parameter.
 	 */
-	PASSWORD(StringType.C_OCTET_STRING, 0, 9, true, SMPPConstant.STAT_ESME_RINVPASWD),
+	PASSWORD(StringType.C_OCTET_STRING, 0, 12, true, SMPPConstant.STAT_ESME_RINVPASWD),
     
 	/**
 	 * system_type string parameter.
